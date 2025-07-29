@@ -41,7 +41,7 @@ cd rsdp
 ## ⚡ Quick Start
 ```bash
 cargo run
-curl -F "file=@sample.csv" http://localhost:8080/upload
+curl -F "file=@test-data/sample.csv" http://localhost:8080/upload
 ```
 
 Then access the parsed data at:

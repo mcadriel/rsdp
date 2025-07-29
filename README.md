@@ -5,20 +5,20 @@ A lightweight and async API service built with Rust, Actix-Web, and Tokio that r
 
 This project is a simple API service built using **Rust**, **Actix-Web**, and **Tokio**. It allows you to:
 
-- 🧾 Read a CSV file passed via CLI and expose it as a JSON API
-- 📤 Upload a CSV file via HTTP POST request
-- 🔄 Automatically transform CSV data into JSON format
-- 🌐 Serve the JSON through an HTTP API (`/data`)
+- Read a CSV file passed via CLI and expose it as a JSON API
+- Upload a CSV file via HTTP POST request
+- Automatically transform CSV data into JSON format
+- Serve the JSON through an HTTP API (`/data`)
 
 ---
 
 ## 🚀 Features
 
-- 🧵 Async and concurrent with `tokio`
-- 🌐 HTTP server using `actix-web`
-- 📦 Multipart file upload support
-- 📑 CSV parsing using `csv` and serialization with `serde`
-- 🧠 Shared state with live in-memory JSON data
+- Async and concurrent with `tokio`
+- HTTP server using `actix-web`
+- Multipart file upload support
+- CSV parsing using `csv` and serialization with `serde`
+- Shared state with live in-memory JSON data
 
 ---
 
@@ -34,4 +34,16 @@ This project is a simple API service built using **Rust**, **Actix-Web**, and **
 ```bash
 git clone https://github.com/mcadriel/rsdp.git
 cd rsdp
-cargo build --release
+```
+
+---
+
+## ⚡ Quick Start
+```bash
+cargo run
+curl -F "file=@sample.csv" http://localhost:8080/upload
+```
+
+Then access the parsed data at:
+
+http://localhost:8080/data

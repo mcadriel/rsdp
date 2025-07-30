@@ -410,9 +410,9 @@ checksum = "9555578bc9e57714c812a1f84e4fc5b4d21fcb063490c624de019f7464c91268"
 
 [[package]]
 name = "clap"
-version = "4.5.41"
+version = "4.5.42"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "be92d32e80243a54711e5d7ce823c35c41c9d929dc4ab58e1276f625841aadf9"
+checksum = "ed87a9d530bb41a67537289bafcac159cb3ee28460e0a4571123d2a778a6a882"
 dependencies = [
  "clap_builder",
  "clap_derive",
@@ -420,9 +420,9 @@ dependencies = [
 
 [[package]]
 name = "clap_builder"
-version = "4.5.41"
+version = "4.5.42"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "707eab41e9622f9139419d573eca0900137718000c517d47da73045f54331c3d"
+checksum = "64f4f3f3c77c94aff3c7e9aac9a2ca1974a5adf392a8bb751e827d6d127ab966"
 dependencies = [
  "anstream",
  "anstyle",
@@ -518,6 +518,29 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7d02f3b0da4c6504f86e9cd789d8dbafab48c2321be74e9987593de5a894d93d"
 dependencies = [
  "memchr",
+]
+
+[[package]]
+name = "csv_app"
+version = "0.1.0"
+dependencies = [
+ "actix-web",
+ "clap",
+ "csv_lib",
+ "tokio",
+]
+
+[[package]]
+name = "csv_lib"
+version = "0.1.0"
+dependencies = [
+ "actix-multipart",
+ "actix-web",
+ "csv",
+ "futures-util",
+ "serde",
+ "serde_json",
+ "tokio",
 ]
 
 [[package]]
@@ -1299,20 +1322,6 @@ name = "regex-syntax"
 version = "0.8.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2b15c43186be67a4fd63bee50d0303afffcef381492ebe2c5d87f324e1b8815c"
-
-[[package]]
-name = "rsdp"
-version = "0.1.0"
-dependencies = [
- "actix-multipart",
- "actix-web",
- "clap",
- "csv",
- "futures-util",
- "serde",
- "serde_json",
- "tokio",
-]
 
 [[package]]
 name = "rustc-demangle"
